@@ -4,8 +4,8 @@
 <%= f.text_field :title %>
 <p>Body</p>
 <%= f.text_area :body %>
-<%= f.submit 'Update book' %>
+<div class= "edit-button"><%= f.submit 'Update book' %></div>
 <% end %>
 
-<%= link_to 'Show', book_path(@book.id), method: :get %>
-<%= link_to 'Back', books_path, method: :get %>
+<%= link_to 'Show', book_path(@book.id), method: :get, style: 'color: black' %>|
+<%= link_to 'Back', books_path, method: :get, style: 'color: black' %>

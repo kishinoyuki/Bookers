@@ -1,5 +1,8 @@
+<div class= "book-title">
 <p>Title: <%= @book.title %></p>
+</div>
+<div class= "book-body">
 <p>Body: <%= @book.body %></p>
-
-<%=link_to 'Edit', edit_book_path(@book.id), method: :get %>
-<%=link_to 'Back', books_path, method: :get %>
+</div>
+<%=link_to 'Edit', edit_book_path(@book.id), method: :get, style: 'color: black' %>|
+<%=link_to 'Back', books_path, method: :get, style: 'color: black'%>

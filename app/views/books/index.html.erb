@@ -13,7 +13,7 @@
   <td><%= book.body %></td>
   <td><%= link_to 'Show', book_path(book.id), method: :get, style: 'color: black' %></td>
   <td><%= link_to 'Edit', edit_book_path(book.id), method: :get, style: 'color: black' %></td>
-  <td><a clas= "detroy"><%= link_to 'Destroy', book_path(book.id), method: :delete, style: 'color: black', "data-confirm" => "Are you sure?" %></a></td>
+  <td><%= link_to 'Destroy', book_path(book.id), method: :delete, style: 'color: black', "data-confirm" => "Are you sure?" %></td>
   </tbody>
 </tr>
 <% end %>
@@ -21,10 +21,12 @@
 
 <h2>New book</h2>
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
+<form>
 <h3>title</h3>
 <%= f.text_field :title %>
 <h3>body</h3>
 <%= f.text_area :body %>
 
-<%= f.submit 'Create Book' %>
+<div class= "submit-button"><%= f.submit 'Create Book' %></div>
+</form>
 <% end %>

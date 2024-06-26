@@ -19,9 +19,35 @@
   box-sizing: border-box;
 }
 
+.book-introduction {
+  font-size: 13px;
+  padding: 0 33px 33px 33px;
+}
+
+.start-button {
+  margin-left: 33px;
+}
+
 body {
   margin: 33px;
+  font-size: 13px;
 
+}
+
+h1 {
+  font-size: 26px;
+  display: inline-block;
+  margin: 17px 0;
+}
+
+h2 {
+  font-size: 19px;
+  display: inline-block;
+  margin: 16px 0;
+}
+
+table {
+  font-size: 13px;
 }
 
 .title {
@@ -32,3 +58,16 @@ body {
   width: 400px;
 }
 
+form {
+  font-size: 13px;
+}
+
+.book-title {
+  font-size: 13px;
+  padding: 0 33px 33px 33px;
+}
+
+.book-body {
+  font-size: 13px;
+  padding: 0 33px 33px 33px;
+}
