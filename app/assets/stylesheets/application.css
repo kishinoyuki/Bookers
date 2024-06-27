@@ -71,3 +71,58 @@ form {
   font-size: 13px;
   padding: 0 33px 33px 33px;
 }
+
+.error-explanation {
+  margin-bottom: 20px;
+  padding: 0 1px 1px 1px;
+  background-color: red;
+  width: 50%;
+  height: 130px;
+  font-size: 12px;
+}
+
+.error-title {
+  display: block;
+  color: white;
+  background-color: red;
+  padding: 5px 5px 5px 15px;
+  font-weight: bold;
+}
+
+.error-box {
+  background-color: #f0f0f0;
+  height: 125px;
+}
+
+ul {
+  margin: 33px;
+  padding-left: 40px;
+}
+
+.new-book-title {
+  margin-bottom: 20px;
+}
+
+.new-book-body {
+  margin-bottom: 20px;
+}
+
+.label-error {
+  display: inline-block;
+  background-color: red;
+  font-size: 13px;
+}
+
+.text-field-title {
+  padding: 2px;
+  background-color: red;
+  width: 174px;
+  height: 25px;
+}
+
+.text-field-body {
+  padding: 2px;
+  background-color: red;
+  width: 174px;
+  height: 30px;
+}
