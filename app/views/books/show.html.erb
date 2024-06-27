@@ -1,7 +1,11 @@
-<div class= "book-title">
+<div class= "flash-message">
+  <%= flash[:notice] %>
+</div>
+
+<div class= "show-book-title">
 <p>Title: <%= @book.title %></p>
 </div>
-<div class= "book-body">
+<div class= "show-book-body">
 <p>Body: <%= @book.body %></p>
 </div>
 <%=link_to 'Edit', edit_book_path(@book.id), method: :get, style: 'color: black' %>|

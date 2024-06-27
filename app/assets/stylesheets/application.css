@@ -107,6 +107,10 @@ ul {
   margin-bottom: 20px;
 }
 
+.submit-button {
+  margin-bottom: 10px;
+}
+
 .label-error {
   display: inline-block;
   background-color: red;
@@ -125,4 +129,29 @@ ul {
   background-color: red;
   width: 174px;
   height: 30px;
+}
+
+.show-book-title {
+  margin: 33px;
+}
+
+.show-book-body {
+  margin: 33px;
+}
+
+.edit-book-title {
+  margin-bottom: 10px;
+}
+
+.edit-book-body {
+  margin-bottom: 10px;
+}
+
+.edit-button {
+  margin-bottom: 10px;
+}
+
+.flash-message {
+  margin: 33px;
+  color: green;
 }
