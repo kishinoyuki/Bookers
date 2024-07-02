@@ -14,27 +14,27 @@
 <%= form_with model: @book do |f| %>
 <% if @book.errors[:title].any? %>
   <div class= "edit-book-title">
-    <h3 class= "label-error">title</h3>
+    <h3 class= "label-error">Title</h3>
     <div class ="text-field-title"><%= f.text_field :title %></div>
   </div>
 <% else %>
  <div class= "edit-book-title">
-    <h3>title</h3>
+    <h3>Title</h3>
     <%= f.text_field :title %>
   </div>
 <% end %>
 <% if @book.errors[:body].any? %>
   <div class= "edit-book-body">
-    <h3 class= "label-error">body</h3>
+    <h3 class= "label-error">Body</h3>
     <div class ="text-field-body"><%= f.text_field :body %></div>
   </div>
   <% else %>
   <div class= "edit-book-body">
-    <h3>body</h3>
+    <h3>Body</h3>
     <%= f.text_area :body %>
   </div>
 <% end %>
-<div class= "edit-button"><%= f.submit 'Update book' %></div>
+<div class= "edit-button"><%= f.submit 'Update Book' %></div>
 <% end %>
 
 <%= link_to 'Show', book_path(@book.id), method: :get, style: 'color: black' %>|

@@ -27,7 +27,13 @@
 <% if @book.errors.any? %>
 <div class= "error-explanation">
 <div class= "error-box">
-<p class = "error-title"><%= @book.errors.count %>errors prohibited this book from being saved: </p>
+<p class="error-title">
+  <% if @book.errors.count == 1 %>
+  <%= @book.errors.count %>error prohibited this book from being saved:
+  <% else %>
+  <%= @book.errors.count %>errors prohibited this book from being saved:
+  <% end %>
+</p>
   <ul>
     <% @book.errors.full_messages.each do |message| %>
     <li><%= message %></li>
@@ -36,45 +42,41 @@
   </div>
 </div>
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
-<form>
   <% if @book.errors[:title].any? %>
   <div class= "new-book-title">
-    <h3 class= "label-error">title</h3>
+    <h3 class= "label-error">Title</h3>
     <div class ="text-field-title"><%= f.text_field :title %></div>
   </div>
   <% else %>
   <div class= "new-book-title">
-    <h3>title</h3>
+    <h3>Title</h3>
     <%= f.text_field :title %>
   </div>
   <% end %>
   <% if @book.errors[:body].any? %>
   <div class= "new-book-body">
-    <h3 class= "label-error">body</h3>
+    <h3 class= "label-error">Body</h3>
     <div class ="text-field-body"><%= f.text_field :body %></div>
   </div>
   <% else %>
   <div class= "new-book-body">
-    <h3>body</h3>
+    <h3>Body</h3>
     <%= f.text_area :body %>
   </div>
   <% end %>
 
   <div class= "submit-button"><%= f.submit 'Create Book' %></div>
-</form>
 <% end %>
 <% else %>
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
-<form>
   <div class= "new-book-title">
-    <h3>title</h3>
+    <h3>Title</h3>
     <%= f.text_field :title %>
   </div>
   <div class= "new-book-body">
-    <h3>body</h3>
+    <h3>Body</h3>
     <%= f.text_area :body %>
   </div>
 <div class= "submit-button"><%= f.submit 'Create Book' %></div>
-</form>
 <% end %>
 <% end %>

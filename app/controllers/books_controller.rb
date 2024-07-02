@@ -8,6 +8,7 @@ class BooksController < ApplicationController
     @books = Book.all
     render :index
     end
+    puts @book.save.inspect
   end
   def index
     @books = Book.all
